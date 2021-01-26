@@ -33,7 +33,7 @@
     </div> <!-- end of col-md-6 -->
 </div> <!-- end of .row -->
 
-<table class="table table-bordered table-hover">
+<table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
             <th class="ip">IP</th>
