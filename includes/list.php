@@ -5,33 +5,6 @@
     $data_next = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=" . ($results['pagination']['page'] + 1);
     $data_search = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&page=1&banner=" . htmlentities($filter['banner']) . "&exact-match=" . $filter['exact-match'] . "&text=";
 ?>
-<div class="row">
-    <div class="col-md-6">
-        <form class="form-inline">
-            <label>
-                <select class="form-control" size="1" name="rec_per_page" onchange="searchData('<?php echo $rpp_data; ?>' + this.value)">
-                    <option value="10"<?php if ($filter['rec_per_page'] == 10): echo ' selected="selected"'; endif; ?>>10</option>
-                    <option value="20"<?php if ($filter['rec_per_page'] == 20): echo ' selected="selected"'; endif; ?>>20</option>
-                    <option value="30"<?php if ($filter['rec_per_page'] == 30): echo ' selected="selected"'; endif; ?>>30</option>
-                    <option value="50"<?php if ($filter['rec_per_page'] == 50): echo ' selected="selected"'; endif; ?>>50</option>
-                    <option value="100"<?php if ($filter['rec_per_page'] == 100): echo ' selected="selected"'; endif; ?>>100</option>
-                </select>
-                records per page
-            </label>
-        </form>
-    </div> <!-- end of col-md-6 -->
-
-    <div class="col-md-6 text-right">
-
-        <form class="form-inline">
-            <div class="form-group">
-                <span class="ajax-throbber-wrapper"><img src="./assets/img/ajax-loader.gif" alt="Loading..." title="Loading..." id="ajax-loader" /></span>
-                <label>Search:</label>
-                <input class="form-control input-sm"  type="text" onkeyup="searchDataText('<?php echo $data_search; ?>'+this.value);" value="<?php echo htmlentities($filter['text']); ?>">
-            </div>
-        </form>
-    </div> <!-- end of col-md-6 -->
-</div> <!-- end of .row -->
 
 <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
     <thead>
