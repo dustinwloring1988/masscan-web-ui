@@ -290,29 +290,6 @@ include dirname(__FILE__).'/includes/header.php';
 
             <div class="clearfix"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- BEGIN PAGE CONTENT -->
 <div class="container-fluid">
     <div class="row">
