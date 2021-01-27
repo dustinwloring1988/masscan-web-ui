@@ -1,4 +1,4 @@
-<?php include DOC_ROOT.'includes/header.php';?>
+<?php include DOC_ROOT.'/header.php';?>
     <div class="container errorPage">
         <div class="row">
             <div class="col-md-12">
@@ -163,4 +163,4 @@ root@kali:/home$
             </div> <!-- end .col-md-12 -->
         </div> <!-- end of .row -->
     </div> <!-- end of .container -->
-<?php include DOC_ROOT.'includes/footer.php';
+<?php include DOC_ROOT.'footer.php';
