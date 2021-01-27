@@ -1,8 +1,7 @@
-    <!-- BEGIN FOOTER -->
-    <!-- footer content -->
+<!-- footer content -->
         <footer>
           <div class="pull-right">
-            NMap World - <a href="https://NMap.world">NMap World</a>
+            NMap World Template by <a href="https://github.com/dustinwloring1988/masscan-web-ui">Dustinwloring1988</a>
           </div>
           <div class="clearfix"></div>
         </footer>
