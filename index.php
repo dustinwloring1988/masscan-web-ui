@@ -26,12 +26,6 @@ require dirname(__FILE__).'/includes/data_validation.php';
     $data_search = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&page=1&banner=" . htmlentities($filter['banner']) . "&exact-match=" . $filter['exact-match'] . "&text=";
 ?>
 
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-
 <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
@@ -44,22 +38,22 @@ require dirname(__FILE__).'/includes/data_validation.php';
 <link rel="canonical" href="https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard">
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
-<link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
-<link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="./assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 
 <!-- Fontawesome -->
-<link type="text/css" href="../../vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
 
 <!-- Notyf -->
-<link type="text/css" href="../../vendor/notyf/notyf.min.css" rel="stylesheet">
+<link type="text/css" href="./vendor/notyf/notyf.min.css" rel="stylesheet">
 
 <!-- Volt CSS -->
-<link type="text/css" href="../../css/volt.css" rel="stylesheet">
+<link type="text/css" href="./css/volt.css" rel="stylesheet">
 
 <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
@@ -68,8 +62,8 @@ require dirname(__FILE__).'/includes/data_validation.php';
 <body>
 
         <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-md-none">
-    <a class="navbar-brand mr-lg-5" href="../../index.html">
-        <img class="navbar-brand-dark" src="../../assets/img/brand/light.svg" alt="Volt logo" /> <img class="navbar-brand-light" src="../../assets/img/brand/dark.svg" alt="Volt logo" />
+    <a class="navbar-brand mr-lg-5" href="./index.html">
+        <img class="navbar-brand-dark" src="./assets/img/brand/light.svg" alt="Volt logo" /> <img class="navbar-brand-light" src="./assets/img/brand/dark.svg" alt="Volt logo" />
     </a>
     <div class="d-flex align-items-center">
         <button class="navbar-toggler d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,11 +77,11 @@ require dirname(__FILE__).'/includes/data_validation.php';
       <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
         <div class="d-flex align-items-center">
           <div class="user-avatar lg-avatar mr-4">
-            <img src="../../assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white" alt="Bonnie Green">
+            <img src="./assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white" alt="Bonnie Green">
           </div>
           <div class="d-block">
             <h2 class="h6">Hi, Jane</h2>
-            <a href="../../pages/examples/sign-in.html" class="btn btn-secondary text-dark btn-xs"><span class="mr-2"><span class="fas fa-sign-out-alt"></span></span>Sign Out</a>
+            <a href="./pages/examples/sign-in.html" class="btn btn-secondary text-dark btn-xs"><span class="mr-2"><span class="fas fa-sign-out-alt"></span></span>Sign Out</a>
           </div>
         </div>
         <div class="collapse-close d-md-none">
@@ -98,13 +92,13 @@ require dirname(__FILE__).'/includes/data_validation.php';
       </div>
       <ul class="nav flex-column">
         <li class="nav-item ">
-          <a href="../../pages/dashboard/dashboard.html" class="nav-link">
+          <a href="./pages/dashboard/dashboard.html" class="nav-link">
             <span class="sidebar-icon"><span class="fas fa-chart-pie"></span></span>
             <span>Overview</span>
           </a>
         </li>
         <li class="nav-item ">
-          <a href="../../pages/settings.html" class="nav-link">
+          <a href="./pages/settings.html" class="nav-link">
               <span class="sidebar-icon"><span class="fas fa-cog"></span></span>
               <span>Settings</span>
           </a>
@@ -119,7 +113,7 @@ require dirname(__FILE__).'/includes/data_validation.php';
           </span>
           <div class="multi-level collapse  show " role="list" id="submenu-app" aria-expanded="false">
               <ul class="flex-column nav">
-                  <li class="nav-item  active "><a class="nav-link" href="../../pages/tables/bootstrap-tables.html"><span>Bootstrap Tables</span></a></li>
+                  <li class="nav-item  active "><a class="nav-link" href="./pages/tables/bootstrap-tables.html"><span>Bootstrap Tables</span></a></li>
               </ul>
           </div>
         </li>
@@ -133,12 +127,12 @@ require dirname(__FILE__).'/includes/data_validation.php';
           </span>
           <div class="multi-level collapse " role="list" id="submenu-pages" aria-expanded="false">
               <ul class="flex-column nav">
-                  <li class="nav-item"><a class="nav-link" href="../../pages/examples/sign-in.html"><span>Sign In</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="../../pages/examples/sign-up.html"><span>Sign Up</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="../../pages/examples/forgot-password.html"><span>Forgot password</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="../../pages/examples/reset-password.html"><span>Reset password</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="../../pages/examples/404.html"><span>404 Not Found</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="../../pages/examples/500.html"><span>500 Server Error</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./pages/examples/sign-in.html"><span>Sign In</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./pages/examples/sign-up.html"><span>Sign Up</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./pages/examples/forgot-password.html"><span>Forgot password</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./pages/examples/reset-password.html"><span>Reset password</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./pages/examples/404.html"><span>404 Not Found</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="./pages/examples/500.html"><span>500 Server Error</span></a></li>
               </ul>
           </div>
         </li>
@@ -152,9 +146,9 @@ require dirname(__FILE__).'/includes/data_validation.php';
           </span>
           <div class="multi-level collapse " role="list" id="submenu-components" aria-expanded="false">
               <ul class="flex-column nav">
-                  <li class="nav-item "><a class="nav-link" href="../../pages/components/notifications.html"><span>Notifications</span></a></li>
-                  <li class="nav-item "><a class="nav-link" href="../../pages/components/forms.html"><span>Forms</span></a></li>
-                  <li class="nav-item "><a class="nav-link" href="../../pages/components/modals.html"><span>Modals</span></a></li>
+                  <li class="nav-item "><a class="nav-link" href="./pages/components/notifications.html"><span>Notifications</span></a></li>
+                  <li class="nav-item "><a class="nav-link" href="./pages/components/forms.html"><span>Forms</span></a></li>
+                  <li class="nav-item "><a class="nav-link" href="./pages/components/modals.html"><span>Modals</span></a></li>
               </ul>
           </div>
         </li>
@@ -166,11 +160,11 @@ require dirname(__FILE__).'/includes/data_validation.php';
           </a>
         </li>
         <li class="nav-item">
-          <a href="https://themesberg.com" target="_blank" class="nav-link d-flex align-items-center">
+          <a href="https://nmap.world" target="_blank" class="nav-link d-flex align-items-center">
             <span class="sidebar-icon">
-              <img src="../../assets/img/themesberg.svg" height="20" width="20" alt="Themesberg Logo">
+              <img src="./assets/img/themesberg.svg" height="20" width="20" alt="NMap World Logo">
             </span>
-            <span>Themesberg</span>
+            <span>NMap World</span>
           </a>
         </li>
       </ul>
@@ -204,11 +198,11 @@ require dirname(__FILE__).'/includes/data_validation.php';
             <div class="dropdown-menu dashboard-dropdown dropdown-menu-lg dropdown-menu-center mt-2 py-0">
               <div class="list-group list-group-flush">
                 <a href="#" class="text-center text-primary font-weight-bold border-bottom border-light py-3">Notifications</a>
-                <a href="../../pages/calendar.html" class="list-group-item list-group-item-action border-bottom border-light">
+                <a href="./pages/calendar.html" class="list-group-item list-group-item-action border-bottom border-light">
                   <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../../assets/img/team/profile-picture-1.jpg" class="user-avatar lg-avatar rounded-circle">
+                        <img alt="Image placeholder" src="./assets/img/team/profile-picture-1.jpg" class="user-avatar lg-avatar rounded-circle">
                       </div>
                       <div class="col pl-0 ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -223,11 +217,11 @@ require dirname(__FILE__).'/includes/data_validation.php';
                       </div>
                   </div>
                 </a>
-                <a href="../../pages/tasks.html" class="list-group-item list-group-item-action border-bottom border-light">
+                <a href="./pages/tasks.html" class="list-group-item list-group-item-action border-bottom border-light">
                   <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg" class="user-avatar lg-avatar rounded-circle">
+                        <img alt="Image placeholder" src="./assets/img/team/profile-picture-3.jpg" class="user-avatar lg-avatar rounded-circle">
                       </div>
                       <div class="col pl-0 ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -249,7 +243,7 @@ require dirname(__FILE__).'/includes/data_validation.php';
           <li class="nav-item dropdown">
             <a class="nav-link pt-1 px-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media d-flex align-items-center">
-                <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
+                <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="./assets/img/team/profile-picture-3.jpg">
                 <div class="media-body ml-2 text-dark align-items-center d-none d-lg-block">
                   <span class="mb-0 font-small font-weight-bold">Bonnie Green</span>
                 </div>
@@ -540,42 +534,42 @@ require dirname(__FILE__).'/includes/data_validation.php';
         </main>
 
     <!-- Core -->
-<script src="../../vendor/popper.js/dist/umd/popper.min.js"></script>
-<script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Vendor JS -->
-<script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="./vendor/onscreen/dist/on-screen.umd.min.js"></script>
 
 <!-- Slider -->
-<script src="../../vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="./vendor/nouislider/distribute/nouislider.min.js"></script>
 
 <!-- Jarallax -->
-<script src="../../vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="./vendor/jarallax/dist/jarallax.min.js"></script>
 
 <!-- Smooth scroll -->
-<script src="../../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="./vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
 <!-- Count up -->
-<script src="../../vendor/countup.js/dist/countUp.umd.js"></script>
+<script src="./vendor/countup.js/dist/countUp.umd.js"></script>
 
 <!-- Notyf -->
-<script src="../../vendor/notyf/notyf.min.js"></script>
+<script src="./vendor/notyf/notyf.min.js"></script>
 
 <!-- Charts -->
-<script src="../../vendor/chartist/dist/chartist.min.js"></script>
-<script src="../../vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="./vendor/chartist/dist/chartist.min.js"></script>
+<script src="./vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
 
 <!-- Datepicker -->
-<script src="../../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+<script src="./vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
 
 <!-- Simplebar -->
-<script src="../../vendor/simplebar/dist/simplebar.min.js"></script>
+<script src="./vendor/simplebar/dist/simplebar.min.js"></script>
 
 <!-- Github buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <!-- Volt JS -->
-<script src="../../assets/js/volt.js"></script>
+<script src="./assets/js/volt.js"></script>
 
     
 </body>
