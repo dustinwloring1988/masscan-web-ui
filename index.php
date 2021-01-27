@@ -5,13 +5,13 @@ require dirname(__FILE__).'/includes/functions.php';
 require dirname(__FILE__).'/includes/data_validation.php';
 include dirname(__FILE__).'/includes/header.php';
 ?>
-  <body class="nav-md">
+<body class="nav-md">
     <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>NMap World!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -38,52 +38,17 @@ include dirname(__FILE__).'/includes/header.php';
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">General Form</a></li>
-                      <li><a href="form_advanced.html">Advanced Components</a></li>
-                      <li><a href="form_validation.html">Form Validation</a></li>
-                      <li><a href="form_wizards.html">Form Wizard</a></li>
                       <li><a href="form_upload.html">Form Upload</a></li>
-                      <li><a href="form_buttons.html">Form Buttons</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="general_elements.html">General Elements</a></li>
-                      <li><a href="media_gallery.html">Media Gallery</a></li>
-                      <li><a href="typography.html">Typography</a></li>
-                      <li><a href="icons.html">Icons</a></li>
-                      <li><a href="glyphicons.html">Glyphicons</a></li>
-                      <li><a href="widgets.html">Widgets</a></li>
-                      <li><a href="invoice.html">Invoice</a></li>
-                      <li><a href="inbox.html">Inbox</a></li>
-                      <li><a href="calendar.html">Calendar</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
                       <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Chart JS</a></li>
-                      <li><a href="chartjs2.html">Chart JS2</a></li>
-                      <li><a href="morisjs.html">Moris JS</a></li>
-                      <li><a href="echarts.html">ECharts</a></li>
-                      <li><a href="other_charts.html">Other Charts</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -93,41 +58,10 @@ include dirname(__FILE__).'/includes/header.php';
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">E-commerce</a></li>
-                      <li><a href="projects.html">Projects</a></li>
                       <li><a href="project_detail.html">Project Detail</a></li>
                       <li><a href="contacts.html">Contacts</a></li>
-                      <li><a href="profile.html">Profile</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="page_403.html">403 Error</a></li>
-                      <li><a href="page_404.html">404 Error</a></li>
-                      <li><a href="page_500.html">500 Error</a></li>
-                      <li><a href="plain_page.html">Plain Page</a></li>
-                      <li><a href="login.html">Login Page</a></li>
-                      <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="#level1_1">Level One</a>
-                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
-                          <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.html">Level Two</a>
-                            </li>
-                            <li><a href="#level2_1">Level Two</a>
-                            </li>
-                            <li><a href="#level2_2">Level Two</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#level1_2">Level One</a>
-                        </li>
-                    </ul>
-                  </li>                  
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
                 </ul>
               </div>
 
@@ -179,7 +113,7 @@ include dirname(__FILE__).'/includes/header.php';
                   <li role="presentation" class="nav-item dropdown open">
                     <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
                       <i class="fa fa-envelope-o"></i>
-                      <span class="badge bg-green">6</span>
+                      <span class="badge bg-green">2</span>
                     </a>
                     <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
                       <li class="nav-item">
@@ -199,31 +133,7 @@ include dirname(__FILE__).'/includes/header.php';
                           <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
                           <span>
                             <span>John Smith</span>
-                            <span class="time">3 mins ago</span>
-                          </span>
-                          <span class="message">
-                            Film festivals used to be do-or-die moments for movie makers. They were where...
-                          </span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                          <span>
-                            <span>John Smith</span>
-                            <span class="time">3 mins ago</span>
-                          </span>
-                          <span class="message">
-                            Film festivals used to be do-or-die moments for movie makers. They were where...
-                          </span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="dropdown-item">
-                          <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                          <span>
-                            <span>John Smith</span>
-                            <span class="time">3 mins ago</span>
+                            <span class="time">5 mins ago</span>
                           </span>
                           <span class="message">
                             Film festivals used to be do-or-die moments for movie makers. They were where...
@@ -268,101 +178,116 @@ include dirname(__FILE__).'/includes/header.php';
 
             <div class="clearfix"></div>
 
-            <!-- BEGIN PAGE CONTENT -->
-<div class="container-fluid">
-    <div class="row">
-        <!-- BEGIN FORM CONTENT-->
-         <div class="panel panel-default margin">
-             <div style="display:block;" class="panel-heading clearfix" data-toggle="collapse" href="#collapse">
-                 <h4 class="pull-left"><i class="glyphicon glyphicon-search"></i> Search</h4>
-                 <div id="search-params" class="pull-left"></div>
-                 <a data-toggle="collapse" href="#collapse" style="display:block;" class="pull-right glyphicon glyphicon-minus"></a>
-             </div>
-             <div id="collapse" class="panel-collapse collapse in">
-                 <div class="panel-body">
-                     <form action="./index.php" class="horizontal-form" onsubmit="return submitSearchForm();" id="form">
-                         <input type="hidden" name="action" value="search"/>
-                         <div class="row">
-                             <div class="col-md-2">
-                                 <div class="form-group">
-                                     <label for="ipAddress">IP Address</label>
-                                     <input type="text" class="form-control input-sm" id="ipAddress" name="ip" value="<?php echo htmlentities($filter['ip']); ?>" placeholder="xxx.xxx.xxx.xxx">
-                                 </div>
-                             </div>
-                             <div class="col-md-2">
-                                 <div class="form-group">
-                                     <label for="portN">Port Number</label>
-                                     <input type="text" class="form-control input-sm" id="portN" name="port" value="<?php if ($filter['port'] > 0):echo (int)$filter['port'];endif; ?>" placeholder="1-65535">
-                                 </div>
-                             </div>
-                             <div class="col-md-2">
-                                 <div class="form-group">
-                                     <label for="serviceState">State</label>
-                                     <input type="text" class="form-control input-sm" id="serviceState" name="state" value="<?php echo htmlentities($filter['state']); ?>" placeholder="open/closed">
+            <div class="row">
 
-                                 </div>
-                             </div>
-                             <div class="col-md-3">
-                                 <div class="form-group">
-                                     <label for="pProtocol">Protocol</label>
-                                     <input type="text" class="form-control input-sm" id="pProtocol" name="protocol" value="<?php echo htmlentities($filter['protocol']); ?>" placeholder="tcp/udp">
-                                 </div>
-                             </div>
-                             <div class="col-md-3">
-                                 <div class="form-group">
-                                     <label for="pService">Service</label>
-                                     <input type="text" class="form-control input-sm" id="pService" name="service" value="<?php echo htmlentities($filter['service']); ?>" placeholder="ftp/msrpc/smtp">
-                                 </div>
-                             </div>
-                         </div> <!-- end of .row-->
-                         <div class="row">
-                             <div class="col-md-7">
-                                 <div class="form-group">
-                                     <label for="pBanner">Service Banner/Title</label>
-                                     <input type="text" class="form-control input-sm" id="pBanner" name="banner" value="<?php echo htmlentities($filter['banner']); ?>" placeholder="IIS/Apache/ESMTP">
-                                 </div>
-                             </div>
-                             <div class="col-md-2">
-                                 <br>
-                                 <div class="checkbox">
-                                     <label><input type="checkbox" name="exact-match" value="1"<?php if ($filter['exact-match'] === 1): echo ' checked'; endif; ?>>Exact match</label>
-                                 </div>
-                             </div>
-                             <div class="col-md-3">
-                                 <br>
-                                 <button type="submit" class="btn btn-primary btn-sm" style="width:100px;"><i class="glyphicon glyphicon-ok"></i> Go</button>
-                                 <span class="ajax-throbber-wrapper-form"><img src="./assets/img/ajax-loader.gif" alt="Loading..." title="Loading..." id="ajax-loader-form"/></span>
-                             </div>
-                         </div> <!-- end of .row-->
-                     </form>
-                 </div>
-             </div>
-         </div>
-         <!-- END FORM CONTENT-->
-     </div> <!--end of .row -->
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Button Example <small>Users</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Settings 1</a>
+                            <a class="dropdown-item" href="#">Settings 2</a>
+                          </div>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                      <div class="row">
+                          <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                    <p class="text-muted font-13 m-b-30">
+                      The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
+                    </p>
+					
+					<?php
+    $pager_data = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=";
+    $rpp_data = "action=search&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=1&rec_per_page=";
+    $data_prev = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=" . ($results['pagination']['page'] - 1);
+    $data_next = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=" . ($results['pagination']['page'] + 1);
+    $data_search = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&page=1&banner=" . htmlentities($filter['banner']) . "&exact-match=" . $filter['exact-match'] . "&text=";
+?>
+					
+                    <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th class="ip">IP</th>
+            <th class="banner">Banner/Title</th>
+            <th class="port">Port</th>
+            <th class="service">Service</th>
+            <th class="protocol text-center">Protocol</th>
+                        </tr>
+                      </thead>
 
-    <div class="row" id="ajax-search-container">
-        <?php require dirname(__FILE__).'/includes/res-wrapper.php'; ?>
-        <?php if (empty($results['data'])): ?>
-            <p class="text-right import-help">How to import data? Click <a href="javascript:void(0);" onclick="showImportHelp();">here</a> for more info.</p>
-        <?php endif;?>
-    </div>
-</div> <!-- end of .container-fluid -->
-<!-- END PAGE CONTENT -->
+                      <tbody>
+					  
+					<!-- Insert Code here -->
+					  
+					  <?php if (!empty($results['data'])): ?>
+        <?php foreach ($results['data'] as $k => $r):?>
+            <tr>
+                <td class="ip"><a href="javascript:void(0);" onclick="return showIpHistory('<?php echo long2ip($r['ipaddress']); ?>', '<?php echo $r['ipaddress']; ?>')"><?php echo long2ip($r['ipaddress']); ?></a></td>
+                <td class="banner">
+                    <?php if (!empty($r['banner'])): ?>
+                        <strong>Banner:</strong> <?php echo htmlentities($r['banner']); ?>
+                    <?php endif; ?>
+                    <?php if (!empty($r['title'])): ?>
+                        <strong>Title:</strong> <?php echo htmlentities($r['title']); ?>
+                    <?php endif; ?>
+                </td>
+                <td class="port"><?php echo $r['port_id']; ?></td>
+                <td class="service">
+                    <?php if ($r['service'] !== 'title'): ?>
+                        <?php echo htmlentities($r['service']); ?>
+                        <?php if ($r['service'] == 'http'): ?>
+                        <a href="http://<?php echo long2ip($r['ipaddress'])?><?php echo ((int) $r['port_id'] > 0 && (int) $r['port_id'] !== 80)   ? ':'.$r['port_id']   :   '';?>" target="_blank"><i class="glyphicon glyphicon-new-window"></i></a><?php
+                        endif; ?>
+                    <?php endif; ?>
+                </td>
+                <td class="protocol"><?php echo htmlentities($r['protocol']); ?></td>
+            </tr>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <tr>
+            <td colspan="5" class="text-center">
+                <p class="alert alert-danger">No results</p>
+            </td>
+        </tr>
+    <?php endif; ?>
+	
+					<!-- /Insert Code here -->
 					
-					
+                      </tbody>
+					  
+                    </table>
                   </div>
                 </div>
               </div>
             </div>
                 </div>
               </div>
-
-			<!-- End Button Table -->
+			
+			<!-- Start Delete -->
+			
 			</div>
+			
+			<!-- /Start Delete -->
+			
           </div>
         </div>
         <!-- /page content -->
-		
-		<?php
+
+      </div>
+    </div>
+
+<!-- footer content -->
+        <?php
 include dirname(__FILE__).'/includes/footer.php';
+        <!-- /footer content -->
