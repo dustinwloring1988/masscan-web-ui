@@ -7,7 +7,7 @@ Here's a quick guide to get started:
 
 ```
 root@kali:~# apt-get install apache2 php libapache2-mod-php php-mysqli php-xml mysql-server
-root@kali:~# git clone https://github.com/offensive-security/masscan-web-ui
+root@kali:~# git clone https://github.com/dustinwloring1988/masscan-web-ui
 root@kali:~# mv masscan-web-ui/* /var/www/html/
 root@kali:~# cd /var/www/html/
 ```
