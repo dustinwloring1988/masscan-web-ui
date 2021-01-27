@@ -19,6 +19,11 @@ define('DOC_ROOT', dirname(__FILE__).'/');
 require dirname(__FILE__).'/includes/config.php';
 require dirname(__FILE__).'/includes/functions.php';
 require dirname(__FILE__).'/includes/data_validation.php';
+    $pager_data = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=";
+    $rpp_data = "action=search&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=1&rec_per_page=";
+    $data_prev = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=" . ($results['pagination']['page'] - 1);
+    $data_next = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&banner=" . htmlentities($filter['banner']) . "&text=" . htmlentities($filter['text']) . "&exact-match=" . $filter['exact-match'] . "&page=" . ($results['pagination']['page'] + 1);
+    $data_search = "action=search&rec_per_page=" . (int)$filter['rec_per_page'] . "&ip=" . htmlentities($filter['ip']) . "&port=" . (int)$filter['port'] . "&state=" . htmlentities($filter['state']) . "&protocol=" . htmlentities($filter['protocol']) . "&service=" . htmlentities($filter['service']) . "&page=1&banner=" . htmlentities($filter['banner']) . "&exact-match=" . $filter['exact-match'] . "&text=";
 ?>
 
 <head> 
@@ -269,6 +274,35 @@ require dirname(__FILE__).'/includes/data_validation.php';
 				
 				<!-- Added this code for testing -->
 				
+				<div class="row">
+    <div class="col-md-6">
+        <form class="form-inline">
+            <label>
+                <select class="form-control" size="1" name="rec_per_page" onchange="searchData('<?php echo $rpp_data; ?>' + this.value)">
+                    <option value="10"<?php if ($filter['rec_per_page'] == 10): echo ' selected="selected"'; endif; ?>>10</option>
+                    <option value="20"<?php if ($filter['rec_per_page'] == 20): echo ' selected="selected"'; endif; ?>>20</option>
+                    <option value="30"<?php if ($filter['rec_per_page'] == 30): echo ' selected="selected"'; endif; ?>>30</option>
+                    <option value="50"<?php if ($filter['rec_per_page'] == 50): echo ' selected="selected"'; endif; ?>>50</option>
+                    <option value="100"<?php if ($filter['rec_per_page'] == 100): echo ' selected="selected"'; endif; ?>>100</option>
+                </select>
+                records per page
+            </label>
+        </form>
+    </div> <!-- end of col-md-6 -->
+
+    <div class="col-md-6 text-right">
+
+        <form class="form-inline">
+            <div class="form-group">
+                <span class="ajax-throbber-wrapper"><img src="./assets/img/ajax-loader.gif" alt="Loading..." title="Loading..." id="ajax-loader" /></span>
+                <label>Search:</label>
+                <input class="form-control input-sm"  type="text" onkeyup="searchDataText('<?php echo $data_search; ?>'+this.value);" value="<?php echo htmlentities($filter['text']); ?>">
+            </div>
+        </form>
+    </div> <!-- end of col-md-6 -->
+</div> <!-- end of .row -->
+				
+				<!-- /End testing code -->
 				
 				<!-- Added this code for testing -->
 				
@@ -342,43 +376,28 @@ require dirname(__FILE__).'/includes/data_validation.php';
          </div>
          <!-- END FORM CONTENT-->
      </div> <!--end of .row -->
-								
+				
+				    <div class="panel-heading" >
+        <h4><i class="glyphicon glyphicon-globe"></i> Results</h4>
+        <div class="btn-group pull-right ">
+            <button class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown">Save <i class="glyphicon glyphicon-chevron-down"></i></button>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:void(0);" onclick="return exportResultsToXML('<?php echo http_build_query($filter);?>');" style="margin-left:10px;" id="export-link">Export to XML</a></li>
+                <li><a href="export-csv.php" style="margin-left:10px;" id="export-link">Export to CSV</a></li>
+            </ul>
+        </div>
+    </div> <!-- end of .panel-heading-->
+				
 
 				<!-- /End this code for testing -->
 				
-                <h2 class="h4">All Orders</h2>
-                    <p class="mb-0">Your web analytics dashboard template.</p>
-                </div>
-                <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-primary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-primary">Export</button>
+                <div class="d-flex justify-content-between w-100 flex-wrap">
+                    <div class="mb-3 mb-lg-0">
+                        <h1 class="h4">Bootstrap tables</h1>
+                        <p class="mb-0">Dozens of reusable components built to provide buttons, alerts, popovers, and more.</p>
                     </div>
-                </div>
-            </div>
-            <div class="table-settings mb-4">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col col-md-6 col-lg-3 col-xl-4">
-                        <div class="input-group">
-                            <span class="input-group-text" id="basic-addon2"><span class="fas fa-search"></span></span>
-                            <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-2 col-xl-1 pl-md-0 text-right">
-                        <div class="btn-group">
-                            <button class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="icon icon-sm icon-gray">
-                                    <span class="fas fa-cog"></span>
-                                </span>
-                                <span class="sr-only">Toggle Dropdown</span>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-xs dropdown-menu-right">
-                                <span class="dropdown-item font-weight-bold text-dark">Show</span>
-                                <a class="dropdown-item d-flex font-weight-bold" href="#">10 <span class="icon icon-small ml-auto"><span class="fas fa-check"></span></span></a>
-                                <a class="dropdown-item font-weight-bold" href="#">20</a>
-                                <a class="dropdown-item font-weight-bold" href="#">30</a>
-                            </div>
-                        </div>
+                    <div>
+                        <a href="https://themesberg.com/docs/volt-bootstrap-5-dashboard/components/tables/" class="btn btn-outline-gray"><i class="far fa-question-circle mr-1"></i> Bootstrap Tables Docs</a>
                     </div>
                 </div>
             </div>
@@ -436,34 +455,52 @@ require dirname(__FILE__).'/includes/data_validation.php';
                         </table>
 						
 						<!-- Added this ocde for testing -->
-<div class="card-footer px-3 border-0 d-flex align-items-center justify-content-between">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination mb-0">
-                            <li class="page-item">
-                                <a class="page-link" href="#">Previous</a>
+						
+						<?php if ($results['pagination']['records'] > 0):?>
+    <div class="row pagination-container">
+        <div class="col-md-6">
+            <p>Showing <?php echo $results['pagination']['from']; ?> to <?php echo $results['pagination']['to']; ?> of <?php echo $results['pagination']['records']; ?> entries</p>
+        </div> <!-- end of col-md-6 -->
+        <div class="col-md-6 text-right">
+
+            <nav class="pull-right">
+                <ul class="pagination pagination-sm">
+                    <li class="prev<?php if ($results['pagination']['page'] == 1): echo " disabled"; endif; ?>">
+                        <a href="javascript:void(0);" onclick="searchData('<?php echo $data_prev; ?>', 'ajax-loader-pagination');">&laquo; Prev</a>
+                    </li>
+                    <?php for ($i = 1; $i <= $results['pagination']['pages']; $i++): ?>
+                        <?php if ((($results['pagination']['page'] - 3) < $i) && (($results['pagination']['page'] + 3) > $i)): ?>
+                            <li class="<?php if ($results['pagination']['page'] == $i): echo "active"; endif; ?>">
+                                <a href="javascript:void(0);" onclick="searchData('<?php echo $pager_data . $i; ?>', 'ajax-loader-pagination');"><?php echo (int)$i; ?></a>
                             </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">1</a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">4</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">5</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="font-weight-bold small">Showing <b>5</b> out of <b>25</b> entries</div>
-                </div>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                    <li class="next<?php if ($results['pagination']['page'] == $results['pagination']['pages']): echo " disabled"; endif; ?>">
+                        <a href="javascript:void(0);" onclick="searchData('<?php echo $data_next; ?>');">Next  &raquo;</a>
+                    </li>
+                </ul>
+            </nav>
+            <img src="./assets/img/ajax-loader.gif" alt="Loading..." title="Loading..." id="ajax-loader-pagination" class="pull-right">
+        </div> <!-- end of col-md-6 -->
+    </div> <!-- end of .row -->
+<?php endif;?>
+						
+						
+						<!-- START MODAL-->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="width:90%; margin:50px 5% 0; left:0;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 id="myModalLabel"></h3>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MODAL-->
 						<!-- /End code for testing here -->
 						
 						
