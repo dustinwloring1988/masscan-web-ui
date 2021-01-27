@@ -309,7 +309,7 @@ require dirname(__FILE__).'/includes/data_validation.php';
 				    <div class="row">
         <!-- BEGIN FORM CONTENT-->
          <div class="panel panel-default margin">
-             <div style="display:block;" class="panel-heading clearfix" data-toggle="collapse" href="#collapse">
+             <div style="display:block;" class="panel-heading clearfix" data-toggle="collapse show" href="#collapse">
                  <h4 class="pull-left"><i class="glyphicon glyphicon-search"></i> Search</h4>
                  <div id="search-params" class="pull-left"></div>
                  <a data-toggle="collapse" href="#collapse" style="display:block;" class="pull-right glyphicon glyphicon-minus"></a>
